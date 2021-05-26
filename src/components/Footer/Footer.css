@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-neonwhite);
+  border-top: 1px solid var(--clr-neonwhite);
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  padding-top: 2vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  font-family: 'Roboto', sans-serif;
+}

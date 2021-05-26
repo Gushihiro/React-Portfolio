@@ -1,0 +1,285 @@
+:root {
+  --clr-neonblue: hsl(205, 100%, 50%);
+  --clr-neonwhite: hsl(0, 0%, 100%);
+}
+
+.projectlink {
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-neonwhite);
+}
+
+.container-main {
+  padding-top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,0,1));
+}
+
+.vedomy-mobile {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+  min-height:70vh;
+  width: 40vw;
+  border-radius: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.vmobile-inner {
+  /* border: 1px solid var(--clr-neonwhite); */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.vmobile-front {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid var(--clr-neonwhite); */
+  border-radius: 10px;
+  min-height:60vh;
+  width: 100vw;
+  margin: 0 auto;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.247);
+  opacity: 1;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+a {
+  padding-top: 20px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-neonblue);
+}
+
+.vmobile-front, .vmobile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.vmobile-front img {
+  width: 80%;
+  height: 70%;
+  border-radius: 10%;
+  -webkit-transition: all 1s ease-out;
+ -moz-transition: all 1s ease-out;
+ -o-transition: all 1s ease-out;
+ -ms-transition: all 1s ease-out;
+ transition: all 1s ease-out;
+}
+
+.vmobile-back {
+  /* border: 1px solid var(--clr-neonwhite); */
+  border-radius: 10px;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.247);
+  transform: rotateY(180deg);
+  box-shadow: 10px 10px 30px hsla(261, 64%, 68%, 0.795), inset 0 0 20px rgba(255, 255, 255, 0.411);
+  transition: 1s;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.vmobile-front:hover, .vmobile-front:hover > img {
+  opacity: 1;
+  box-shadow: -10px 10px 30px hsla(261, 64%, 68%, 0.795), inset 0 0 20px rgba(255, 255, 255, 0.411);
+  transition: 1s;
+  /* transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1) */
+}
+
+.vedomy-mobile:hover {
+  box-shadow: 0px 0px 30px hsla(261, 64%, 68%, 0.795);
+  transition: 1s;
+}
+
+.vmobile-back h2 {
+  -webkit-text-stroke: .1px hsla(261, 64%, 68%, 0.795);
+  font-size: 4rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.vmobile-back p {
+  color: var(--clr-neonwhite);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-family: 'Roboto', sans-serif;
+}
+
+.vedomy-mobile:focus {
+  outline: none;
+}
+
+.vedomy-mobile:focus .vmobile-inner {
+  transform: rotateY(180deg);
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+
+  .vmobile-front {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid var(--clr-neonwhite); */
+      border-radius: 10px;
+      height:60vh;
+      width: 100vw;
+      margin: 0 auto;
+      box-shadow: 0 0px 10px rgba(255, 255, 255, 0.247);
+      opacity: 1;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      -ms-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+  }
+
+  .vedomy-mobile {
+      display:flex;
+      flex-direction: column;
+      margin: 0 auto;
+      background-color: transparent;
+      height:60vh;
+      width: 100vw;
+      border-radius: 10px;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      -ms-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+  }
+
+  .vmobile-front img {
+      width: 80%;
+      height: 70%;
+      border-radius: 10%;
+      -webkit-transition: all 1s ease-out;
+     -moz-transition: all 1s ease-out;
+     -o-transition: all 1s ease-out;
+     -ms-transition: all 1s ease-out;
+     transition: all 1s ease-out;
+  }
+
+  .cmobile-front img {
+      width: 80%;
+      height: 70%;
+      border-radius: 10%;
+      -webkit-transition: all 1s ease-out;
+     -moz-transition: all 1s ease-out;
+     -o-transition: all 1s ease-out;
+     -ms-transition: all 1s ease-out;
+     transition: all 1s ease-out;
+  }
+
+  .vmobile-inner {
+      flex-direction: column;
+  }
+
+  .vedomy-mobile:focus .vmobile-inner {
+      transform: rotateY(180deg);
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      -ms-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+  }
+
+  .circle-mobile:focus .cmobile-inner {
+      transform: rotateY(180deg);
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      -ms-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+  }
+
+  .container {
+      margin-top:200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0,0,0,1));
+      border-radius:0px;
+  }
+
+  .container-main {
+      /* padding-top: 20vh; */
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,0,1));
+      width:100vw;
+  }
+
+  /* .circle-mobile, .cmobile-front {
+      height:10vh;
+      width: 100%;
+      margin: 0 auto;
+      border-radius:5px;
+  } */
+
+
+  .mobilelink {
+      font-size:1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .h3-animate {
+    animation-name: wipe-enter;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+  }
+
+  .vedomy-animate {
+      animation-name: wipe-enter-left;
+      animation-duration: 1.5s;
+      animation-iteration-count: initial;
+    }
+}
